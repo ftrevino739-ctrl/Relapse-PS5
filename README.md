@@ -1,4 +1,4 @@
-# Relapse PS5
+# PS5 JB 7.00 - 13.60
 Supported firmware: 7.00 through 13.60.
 
 ## Usage

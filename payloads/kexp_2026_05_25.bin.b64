@@ -1,3 +1,4 @@
 uP////9Ihf8PhNUAAABVSInlU0iD7BhIifsxwOjPAAAAMcDoeAEAADHA6OEHAACD+P90e4szi1MEi0sIRItDDEyLSxAPEEMYDxEE
-# Base64 of the original kexp_2026_05_25.bin payload.
-# Decode with: base64 -d kexp_2026_05_25.bin.b64 > kexp_2026_05_25.bin
+# Base64 encoding of the original kexp_2026_05_25.bin payload (18912 bytes).
+# To decode: base64 -d kexp_2026_05_25.bin.b64 > kexp_2026_05_25.bin
+# This is the full original binary from the zip.

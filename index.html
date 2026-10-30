@@ -18,9 +18,8 @@
       position: fixed;
       inset: 0;
       background:
-        radial-gradient(ellipse at 20% 30%, rgba(255,255,255,0.4) 0%, transparent 50%),
-        radial-gradient(ellipse at 80% 70%, rgba(200,210,225,0.3) 0%, transparent 50%),
-        repeating-linear-gradient(45deg, transparent, transparent 40px, rgba(255,255,255,0.03) 40px, rgba(255,255,255,0.03) 80px);
+        radial-gradient(ellipse at 20% 30%, rgba(255,255,255,0.35) 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 70%, rgba(200,210,225,0.25) 0%, transparent 50%);
       pointer-events: none;
       z-index: 0;
     }
@@ -33,27 +32,25 @@
     .ball {
       position: absolute;
       border-radius: 50%;
-      background: radial-gradient(circle at 35% 30%, #ffffff 0%, #f0f4f8 40%, #d0d8e5 70%, #b8c4d6 100%);
+      background: radial-gradient(circle at 35% 30%, #ffffff 0%, #f2f6fa 45%, #d5dee9 75%, #c0ccd8 100%);
       box-shadow:
-        inset -12px -12px 25px rgba(0,0,0,0.15),
-        inset 10px 10px 20px rgba(255,255,255,0.8),
-        0 15px 40px rgba(0,0,0,0.15);
+        inset -14px -14px 28px rgba(0,0,0,0.12),
+        inset 12px 12px 22px rgba(255,255,255,0.75),
+        0 18px 45px rgba(0,0,0,0.12);
       animation: float linear infinite;
     }
-    .b1 { width: 520px; height: 520px; left: -160px; top: 5%; animation-duration: 10s; }
-    .b2 { width: 420px; height: 420px; right: -120px; top: 8%; animation-duration: 8s; animation-delay: -2s; }
-    .b3 { width: 580px; height: 580px; left: -180px; bottom: -80px; animation-duration: 12s; animation-delay: -4s; }
-    .b4 { width: 480px; height: 480px; right: -140px; bottom: 10%; animation-duration: 9s; animation-delay: -1s; }
-    .b5 { width: 280px; height: 280px; left: 22%; top: 55%; animation-duration: 7s; animation-delay: -3s; }
-    .b6 { width: 220px; height: 220px; left: 68%; top: 22%; animation-duration: 11s; animation-delay: -5s; }
-    .b7 { width: 160px; height: 160px; left: 48%; top: 18%; animation-duration: 6s; animation-delay: -2s; }
-    .b8 { width: 140px; height: 140px; right: 28%; bottom: 22%; animation-duration: 8s; }
-    .b9 { width: 100px; height: 100px; left: 38%; bottom: 28%; animation-duration: 7s; animation-delay: -1.5s; }
-    .b10 { width: 80px; height: 80px; right: 18%; top: 48%; animation-duration: 5.5s; animation-delay: -3s; }
-    .b11 { width: 200px; height: 200px; left: 75%; top: 62%; animation-duration: 9s; animation-delay: -2.5s; }
+    /* Solo bolas medianas/grandes, bien distribuidas, sin superposición fuerte */
+    .b1 { width: 480px; height: 480px; left: -140px; top: 8%; animation-duration: 11s; }
+    .b2 { width: 420px; height: 420px; right: -110px; top: 12%; animation-duration: 9s; animation-delay: -2s; }
+    .b3 { width: 520px; height: 520px; left: -160px; bottom: -60px; animation-duration: 13s; animation-delay: -4s; }
+    .b4 { width: 450px; height: 450px; right: -120px; bottom: 15%; animation-duration: 10s; animation-delay: -1s; }
+    .b5 { width: 260px; height: 260px; left: 18%; top: 48%; animation-duration: 8s; animation-delay: -3s; }
+    .b6 { width: 220px; height: 220px; left: 62%; top: 28%; animation-duration: 12s; animation-delay: -5s; }
+    .b7 { width: 180px; height: 180px; left: 42%; top: 65%; animation-duration: 7s; animation-delay: -2s; }
+    .b8 { width: 200px; height: 200px; right: 22%; bottom: 28%; animation-duration: 9s; }
     @keyframes float {
       0%   { transform: translateY(0px) rotate(0deg); }
-      50%  { transform: translateY(-30px) rotate(180deg); }
+      50%  { transform: translateY(-25px) rotate(180deg); }
       100% { transform: translateY(0px) rotate(360deg); }
     }
     #top {
@@ -119,9 +116,6 @@
     <div class="ball b6"></div>
     <div class="ball b7"></div>
     <div class="ball b8"></div>
-    <div class="ball b9"></div>
-    <div class="ball b10"></div>
-    <div class="ball b11"></div>
   </div>
 
   <div id="top">

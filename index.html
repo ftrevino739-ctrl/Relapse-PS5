@@ -8,8 +8,8 @@
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html, body {
       height: 100%;
-      background: #000000;
-      color: #ffffff;
+      background: #e8eef5;
+      color: #1a1a1a;
       font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
       overflow: hidden;
     }
@@ -18,29 +18,31 @@
       position: fixed;
       inset: 0;
       background:
-        radial-gradient(ellipse at 20% 10%, rgba(0, 80, 180, 0.15) 0%, transparent 50%),
-        radial-gradient(ellipse at 80% 90%, rgba(0, 100, 200, 0.1) 0%, transparent 50%);
+        radial-gradient(circle at 15% 20%, rgba(255,255,255,0.9) 0%, transparent 40%),
+        radial-gradient(circle at 85% 75%, rgba(220,230,245,0.8) 0%, transparent 45%),
+        radial-gradient(circle at 50% 90%, rgba(240,245,250,0.7) 0%, transparent 50%),
+        radial-gradient(circle at 70% 15%, rgba(255,255,255,0.6) 0%, transparent 30%);
       pointer-events: none;
     }
     #top {
       position: absolute;
-      top: 40px;
+      top: 50px;
       left: 0;
       right: 0;
       text-align: center;
       z-index: 2;
     }
     h1 {
-      font-size: 3.5rem;
+      font-size: 3.2rem;
       font-weight: 700;
-      letter-spacing: 3px;
-      text-shadow: 0 0 40px rgba(0, 120, 255, 0.8);
+      color: #111;
+      letter-spacing: 2px;
     }
     .subtitle {
       margin-top: 6px;
-      font-size: 1.4rem;
-      color: #5dade2;
-      letter-spacing: 2px;
+      font-size: 1.3rem;
+      color: #444;
+      letter-spacing: 1px;
       font-weight: 400;
     }
     #center {
@@ -51,9 +53,9 @@
       z-index: 1;
     }
     .logo {
-      width: 220px;
-      height: 220px;
-      filter: drop-shadow(0 0 30px rgba(0, 140, 255, 0.6));
+      width: 200px;
+      height: 200px;
+      filter: drop-shadow(0 8px 20px rgba(0,0,0,0.15));
     }
     #console {
       position: absolute;
@@ -62,16 +64,16 @@
       transform: translateX(-50%);
       width: 90%;
       max-width: 700px;
-      max-height: 25vh;
+      max-height: 22vh;
       overflow-y: auto;
-      background: rgba(0, 10, 30, 0.6);
-      border: 1px solid rgba(0, 100, 200, 0.3);
+      background: rgba(255,255,255,0.7);
+      border: 1px solid rgba(0,0,0,0.08);
       border-radius: 16px;
-      padding: 16px;
+      padding: 14px;
       font-family: 'Courier New', monospace;
       font-size: 13px;
-      color: #a0c4e8;
-      backdrop-filter: blur(6px);
+      color: #333;
+      backdrop-filter: blur(4px);
       z-index: 2;
     }
   </style>
@@ -83,12 +85,12 @@
   </div>
 
   <div id="center">
-    <!-- PlayStation logo in blue -->
+    <!-- PlayStation logo in black -->
     <svg class="logo" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-      <path d="M20 70 Q20 30 50 25 Q80 30 80 70 Q50 85 20 70 Z" fill="none" stroke="#0070d1" stroke-width="4" stroke-linejoin="round"/>
-      <path d="M35 45 L50 30 L65 45 L50 60 Z" fill="#0070d1"/>
-      <path d="M30 55 Q50 75 70 55" fill="none" stroke="#0070d1" stroke-width="6" stroke-linecap="round"/>
-      <path d="M25 48 Q50 38 75 48" fill="none" stroke="#0070d1" stroke-width="6" stroke-linecap="round"/>
+      <path d="M20 70 Q20 30 50 25 Q80 30 80 70 Q50 85 20 70 Z" fill="none" stroke="#111" stroke-width="3.5" stroke-linejoin="round"/>
+      <path d="M35 45 L50 30 L65 45 L50 60 Z" fill="#111"/>
+      <path d="M30 55 Q50 75 70 55" fill="none" stroke="#111" stroke-width="5.5" stroke-linecap="round"/>
+      <path d="M25 48 Q50 38 75 48" fill="none" stroke="#111" stroke-width="5.5" stroke-linecap="round"/>
     </svg>
   </div>
 

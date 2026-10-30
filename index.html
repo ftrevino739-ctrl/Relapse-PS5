@@ -5,35 +5,76 @@
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
   <title>JailbreakX</title>
   <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
     html, body {
-      background: #060606;
-      color: #fff;
-      font-family: monospace;
-      margin: 0;
-      padding: 20px;
+      height: 100%;
+      background: linear-gradient(160deg, #000000 0%, #0a1628 50%, #0d1b2a 100%);
+      color: #e0e0e0;
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      overflow: hidden;
     }
-    #header {
-      text-align: center;
-      margin-bottom: 20px;
+    #container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      position: relative;
     }
-    #header h1 {
-      margin: 0;
-      font-size: 2.5em;
-      color: #7EC8FF;
+    .logo {
+      width: 180px;
+      height: 180px;
+      margin-bottom: 30px;
+      filter: drop-shadow(0 0 20px rgba(0, 150, 255, 0.4));
     }
-    #header p {
-      margin: 5px 0 0 0;
+    h1 {
+      font-size: 3.2rem;
+      font-weight: 700;
+      color: #ffffff;
+      letter-spacing: 2px;
+      text-shadow: 0 0 30px rgba(0, 150, 255, 0.6);
+    }
+    .subtitle {
+      margin-top: 8px;
+      font-size: 1.3rem;
+      color: #7ec8ff;
+      font-weight: 400;
+      letter-spacing: 1px;
+    }
+    #console {
+      position: absolute;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 90%;
+      max-width: 800px;
+      max-height: 30vh;
+      overflow-y: auto;
+      background: rgba(0, 0, 0, 0.5);
+      border-radius: 12px;
+      padding: 16px;
+      font-family: 'Courier New', monospace;
+      font-size: 14px;
       color: #aaa;
-      font-size: 1.2em;
+      backdrop-filter: blur(4px);
     }
   </style>
 </head>
 <body>
-  <div id="header">
+  <div id="container">
+    <!-- PS5 Logo (simple SVG) -->
+    <svg class="logo" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="50" cy="50" r="45" fill="none" stroke="#0070cc" stroke-width="3"/>
+      <path d="M30 55 L50 35 L70 55 L50 75 Z" fill="#0070cc"/>
+      <circle cx="50" cy="50" r="8" fill="#ffffff"/>
+    </svg>
+
     <h1>JailbreakX</h1>
-    <p>by Fer</p>
+    <div class="subtitle">by Fer</div>
+
+    <div id="console"></div>
   </div>
-  <div id="console"></div>
+
   <script src="./src/firmware.js"></script>
   <script src="./src/main.js"></script>
   <script src="./src/rop.js"></script>

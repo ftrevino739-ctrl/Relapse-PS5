@@ -8,7 +8,7 @@
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html, body {
       height: 100%;
-      background: #f0f4f8;
+      background: #e8eef5;
       color: #111;
       font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
       overflow: hidden;
@@ -22,24 +22,27 @@
     .ball {
       position: absolute;
       border-radius: 50%;
-      background: rgba(255, 255, 255, 0.7);
-      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+      background: rgba(255, 255, 255, 0.75);
+      box-shadow: 0 8px 30px rgba(0,0,0,0.06);
       animation: float linear infinite;
     }
-    .b1 { width: 80px; height: 80px; left: 8%; top: 15%; animation-duration: 18s; }
-    .b2 { width: 40px; height: 40px; left: 85%; top: 25%; animation-duration: 14s; animation-delay: -3s; }
-    .b3 { width: 120px; height: 120px; left: 75%; top: 65%; animation-duration: 22s; animation-delay: -7s; }
-    .b4 { width: 30px; height: 30px; left: 15%; top: 75%; animation-duration: 16s; animation-delay: -2s; }
-    .b5 { width: 60px; height: 60px; left: 45%; top: 10%; animation-duration: 20s; animation-delay: -5s; }
-    .b6 { width: 25px; height: 25px; left: 90%; top: 80%; animation-duration: 12s; animation-delay: -1s; }
+    /* Large balls on sides and middle */
+    .b1 { width: 280px; height: 280px; left: -80px; top: 10%; animation-duration: 10s; }
+    .b2 { width: 220px; height: 220px; right: -60px; top: 5%; animation-duration: 8s; animation-delay: -2s; }
+    .b3 { width: 320px; height: 320px; left: -100px; bottom: -40px; animation-duration: 12s; animation-delay: -4s; }
+    .b4 { width: 260px; height: 260px; right: -70px; bottom: 15%; animation-duration: 9s; animation-delay: -1s; }
+    .b5 { width: 180px; height: 180px; left: 35%; top: 45%; animation-duration: 7s; animation-delay: -3s; }
+    .b6 { width: 140px; height: 140px; left: 60%; top: 20%; animation-duration: 11s; animation-delay: -5s; }
+    .b7 { width: 90px; height: 90px; left: 20%; top: 60%; animation-duration: 6s; animation-delay: -2s; }
+    .b8 { width: 70px; height: 70px; right: 25%; bottom: 30%; animation-duration: 8s; }
     @keyframes float {
       0%   { transform: translateY(0px) rotate(0deg); }
-      50%  { transform: translateY(-25px) rotate(180deg); }
+      50%  { transform: translateY(-40px) rotate(180deg); }
       100% { transform: translateY(0px) rotate(360deg); }
     }
     #top {
       position: absolute;
-      top: 45px;
+      top: 40px;
       left: 0;
       right: 0;
       text-align: center;
@@ -65,9 +68,9 @@
       z-index: 1;
     }
     .logo {
-      width: 180px;
-      height: 180px;
-      filter: drop-shadow(0 6px 16px rgba(0,0,0,0.12));
+      width: 220px;
+      height: auto;
+      filter: drop-shadow(0 8px 20px rgba(0,0,0,0.15));
     }
     #console {
       position: absolute;
@@ -98,6 +101,8 @@
     <div class="ball b4"></div>
     <div class="ball b5"></div>
     <div class="ball b6"></div>
+    <div class="ball b7"></div>
+    <div class="ball b8"></div>
   </div>
 
   <div id="top">
@@ -106,13 +111,7 @@
   </div>
 
   <div id="center">
-    <!-- PlayStation logo (black) -->
-    <svg class="logo" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-      <path d="M28 72 L28 38 Q28 22 48 18 Q72 22 72 42 L72 55 Q72 68 55 72 L28 72 Z" fill="#111"/>
-      <path d="M38 48 L52 32 L66 48 L52 62 Z" fill="#fff"/>
-      <path d="M22 58 Q50 78 78 58" fill="none" stroke="#111" stroke-width="7" stroke-linecap="round"/>
-      <path d="M20 50 Q50 40 80 50" fill="none" stroke="#111" stroke-width="7" stroke-linecap="round"/>
-    </svg>
+    <img src="./ps-logo.svg" class="logo" alt="PlayStation logo">
   </div>
 
   <div id="console"></div>
